@@ -3,8 +3,9 @@ import { Outlet } from "react-router";
 
 function App() {
   return (
-    <div>
-      <Outlet></Outlet>
+    <div className="text-primary">
+      I am COmponent. Hello!
+
     </div>
   );
 }
