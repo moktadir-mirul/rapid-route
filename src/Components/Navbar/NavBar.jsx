@@ -5,13 +5,13 @@ import { Link, NavLink } from "react-router";
 const NavBar = () => {
   const Links = (
     <>
-      <NavLink className="">Home</NavLink>
-      <NavLink>DashBoard</NavLink>
+      <NavLink to={"/"} className="font-medium">Home</NavLink>
+      <NavLink to={"/dashboard"} className="font-medium">DashBoard</NavLink>
     </>
   );
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="w-full shadow-sm">
+      <div className="navbar w-11/12 mx-auto" id="navLinks">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
