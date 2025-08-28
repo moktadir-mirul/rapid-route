@@ -5,26 +5,33 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import "./style.css";
+import BannerImg1 from "../../assets/banner/banner1.png";
+import BannerImg2 from "../../assets/banner/banner2.png";
+import BannerImg3 from "../../assets/banner/banner3.png";
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-
-
-// import required modules
-import { Navigation } from 'swiper/modules';
 
 export default function Banner() {
   return (
-    <>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide className='w-full h-[80vh]'>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+    <div className='h-[450px]'>
+      <Swiper spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        // navigation={true}
+        loop={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper">
+        <SwiperSlide className='w-full h-[80vh]'><img src={BannerImg1} alt="Banner" /></SwiperSlide>
+        <SwiperSlide><img src={BannerImg2} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={BannerImg3} alt="" /></SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }
