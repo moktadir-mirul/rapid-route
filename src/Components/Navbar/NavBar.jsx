@@ -10,8 +10,8 @@ const NavBar = () => {
     </>
   );
   return (
-    <div className="w-full shadow-sm">
-      <div className="navbar w-11/12 mx-auto" id="navLinks">
+    <div className="w-11/12 mx-auto my-5 shadow-sm bg-white rounded-xl">
+      <div className="navbar px-5" id="navLinks">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,9 +43,12 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex gap-5 text-lg">{Links}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-3">
           <Link>
-            <button className="btn bg-lime-300 hover:bg-lime-500 duration-200">Login</button>
+            <button className="btn bg-gray-50 border-2 border-gray-300 hover:bg-lime-500 duration-200">Login</button>
+          </Link>
+          <Link>
+            <button className="btn bg-lime-300 hover:bg-lime-500 duration-200">Be a Rider</button>
           </Link>
         </div>
       </div>

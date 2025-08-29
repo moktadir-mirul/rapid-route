@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Banner() {
   return (
-    <div className='h-[450px]'>
+    <div className='w-11/12 mx-auto rounded-xl my-10 h-[450px]'>
       <Swiper spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -27,10 +27,10 @@ export default function Banner() {
         // navigation={true}
         loop={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper">
+        className="mySwiper rounded-xl">
         <SwiperSlide className='w-full h-[80vh]'><img src={BannerImg1} alt="Banner" /></SwiperSlide>
-        <SwiperSlide><img src={BannerImg2} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={BannerImg3} alt="" /></SwiperSlide>
+        <SwiperSlide className='w-full h-[80vh]'><img src={BannerImg2} alt="" /></SwiperSlide>
+        <SwiperSlide className='w-full h-[80vh]'><img src={BannerImg3} alt="" /></SwiperSlide>
       </Swiper>
     </div>
   );
